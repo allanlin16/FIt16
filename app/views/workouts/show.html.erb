@@ -1,0 +1,11 @@
+<h1><%= @workout.name %></h1>
+
+<p><%= @workout.description %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_workout_path(@workout) %></li>
+  <li><%= link_to "Destroy", workout_path(@workout), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
