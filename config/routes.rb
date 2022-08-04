@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root "workouts#index"
 
-  resources :workouts
+  resources :workouts do 
+    resources :exercises
+  end
+    
   #get "/workouts", to: "workouts#index"
 
   #showing single workout
